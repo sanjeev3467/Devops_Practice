@@ -3,4 +3,4 @@ LABEL author=sanjeev
 LABEL month=aug
 RUN apk add python3
 EXPOSE 8080
-CMD [ "sleep","30"]
+CMD [ "/bin/sh"]
