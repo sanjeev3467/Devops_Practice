@@ -1,3 +1,3 @@
-FROM alpine:3
+FROM scratch
 LABEL author=sanjeev
-LABEL month=juneyes
+LABEL month=aug
