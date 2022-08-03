@@ -1,6 +1,6 @@
-FROM alpine:3
+FROM openjdk:11
 LABEL author=sanjeev
 LABEL month=aug
-RUN apk add python3
+RUN wget https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar
 EXPOSE 8080
-CMD [ "sleep","1d"]
+CMD [ "java","-jar","/spring-petclinic-2.4.2.jar"]
