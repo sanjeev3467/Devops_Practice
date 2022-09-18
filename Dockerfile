@@ -1,9 +1,6 @@
-FROM ubuntu:focal
+FROM openjdk:11
 LABEL author=sanjeev
 LABEL month=sept
-RUN export DEBIAN_FRONTEND=noninteractive && apt update && apt install apache2 -y
+ADD https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/spring-petclinic-2.4.2.jar /auto/Devops_Practice
 EXPOSE 80
-ADD start.sh /start.sh
-ADD https://www.youtube.com/watch?v=k7jMsVQ6fA4 /var/www/html/index.html
-RUN chmod +x /start.sh
-CMD ["/bin/bash","-c","/start.sh"]
+CMD ["java","-jar","spring-petclinic-2.4.2.jar"]
