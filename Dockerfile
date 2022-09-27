@@ -1,2 +1,3 @@
 FROM centos:centos7
-LABEL author=sanjeev
+LABEL author="Sanjeev"
+CMD [ "echo","Hello sai" ]
